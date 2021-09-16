@@ -2,7 +2,6 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 import os.path
 import base64
-import email
 from bs4 import BeautifulSoup
 
 # Define SCOPES
