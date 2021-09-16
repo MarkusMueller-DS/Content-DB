@@ -16,11 +16,25 @@ def getEmails():
         
         result = service.users().messages().list(userId='markus.mueller.ds@gmail.com').execute()
         messages = result.get('messages')
+        
+
+        # get email from a certain id
         txt = service.users().messages().get(userId='markus.mueller.ds@gmail.com', id='17beb2ea7a06eb5e').execute()
         print(type(txt))
         print(txt.keys()) 
-        print(txt['payload'])
-        
+        # print(txt['payload'])
+        payload = txt['payload']
+        parts = payload.get('parts')[0]
+        data = parts['body']['data']
+        data = data.replace("-","+").replace("_","/")
+        decoded_data = base64.b64decode(data)
+
+        # Now, the data obtained is in lxml. So, we will parse
+        # it with BeautifulSoup library
+        soup = BeautifulSoup(decoded_data , "lxml")
+        body = soup.body()
+
+        print(body)
         # iterate through all the messages
        #  for msg in messages:
        #      # Get the message from its id
