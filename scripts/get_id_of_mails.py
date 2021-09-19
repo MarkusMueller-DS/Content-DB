@@ -3,7 +3,13 @@ from google.oauth2.credentials import Credentials   # handel auth
 from googleapiclient.discovery import build         # used to make the queries
 
 import pickle                   # save raw data from query
+import datetime
 
+
+# save date and time of query to the next time I can query new mails
+date_ = datetime.date.today().strftime("%m/%d/%Y")
+date = date_.replace('/', '.')
+query_name = 'id_query_' + date + ".pkl"
 
 # Define SCOPES
 # relevant for auth
@@ -18,12 +24,14 @@ service = build('gmail', 'v1', credentials=creds)
 # maxResult is limited to 500
 # with nextPageToken (will be in the result dict) we can continue to get mail_ids
 # if non nextPageToken is in the result dict then we reached the end of our mailbox
-result = service.users().messages().list(userId='markus.mueller.ds@gmail.com', maxResults=500, pageToken='12641347343635093789').execute()
+result = service.users().messages().list(userId='markus.mueller.ds@gmail.com', q='after:09/17/2021', maxResults=500).execute()
 
 # save raw data in a pickle file
-filename = 'id_query_17.09.2021_q3'
-outfile = open(filename,'wb')
+outfile = open(query_name, 'wb')
 pickle.dump(result, outfile)
 outfile.close()
 
-
+# save date of last query to load it in the next time and use it as the new q parameter in list()
+outfile = open('lastquery.pkl', 'wb')
+pickle.dump(date, outfile)
+outfile.close()
