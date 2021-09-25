@@ -4,12 +4,22 @@ from googleapiclient.discovery import build         # used to make the queries
 
 import pickle                   # save raw data from query
 import datetime
+import os
 
+# path to save results
+data_path = '/Users/markusmuller/python/projects/gmail-newsletter-db/data'
 
 # save date and time of query to the next time I can query new mails
 date_ = datetime.date.today().strftime("%m/%d/%Y")
 date = date_.replace('/', '.')
 query_name = 'id_query_' + date + ".pkl"
+
+# load last query date
+with open('lastquery.pkl', 'rb') as f:
+    last_query_date = pickle.load(f)
+
+last_query_date = last_query_date.replace('.', '/')
+last_query_date = 'after:' + last_query_date
 
 # Define SCOPES
 # relevant for auth
@@ -24,10 +34,10 @@ service = build('gmail', 'v1', credentials=creds)
 # maxResult is limited to 500
 # with nextPageToken (will be in the result dict) we can continue to get mail_ids
 # if non nextPageToken is in the result dict then we reached the end of our mailbox
-result = service.users().messages().list(userId='markus.mueller.ds@gmail.com', q='after:09/17/2021', maxResults=500).execute()
+result = service.users().messages().list(userId='markus.mueller.ds@gmail.com', q=last_query_date, maxResults=500).execute()
 
 # save raw data in a pickle file
-outfile = open(query_name, 'wb')
+outfile = open(os.path.join(data_path, query_name), 'wb')
 pickle.dump(result, outfile)
 outfile.close()
 
