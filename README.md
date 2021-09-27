@@ -16,4 +16,17 @@
 - have one place where everything is saved so it is easier to search through it and find interesting stuff
 - create a sql-Database which is automatically updated 
 
+### Progress
+- [ ] gmail
+    - [x] connected to the api
+    - [x] queried ids of mails
+    - [ ] developed a parser to get the content of the mails 
+    - [ ] meta data and content from each mail 
+- [ ] pocket
+    - [x] connected to the api
+    - [x] made first request
+    - [ ] query the articles 
+- [ ] medium
+    - [ ] look for ways the get the data from medium
+    - ...
 
