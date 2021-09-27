@@ -7,7 +7,7 @@ import datetime
 import os
 
 # path to save results
-data_path = '/Users/markusmuller/python/projects/gmail-newsletter-db/data'
+data_path = '/Users/markusmuller/python/projects/content-db/gmail/data'
 
 # save date and time of query to the next time I can query new mails
 date_ = datetime.date.today().strftime("%m/%d/%Y")
@@ -24,7 +24,7 @@ last_query_date = 'after:' + last_query_date
 # Define SCOPES
 # relevant for auth
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
-pathToToken = '/Users/markusmuller/python/projects/gmail-newsletter-db/token.json'
+pathToToken = '/Users/markusmuller/python/projects/content-db/gmail/token.json'
 creds = Credentials.from_authorized_user_file(pathToToken, SCOPES)
 
 # connect to Gmail api
