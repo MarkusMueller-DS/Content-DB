@@ -1,5 +1,7 @@
-.token
-token.json
-credentials.json
+gmail/.token
+gmail/token.json
+gmail/credentials.json
 .DS_Store
-scripts/test.py
+gmail/scripts/test.py
+pocket/pocket_api_tokens.py
+pocket/test.py
