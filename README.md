@@ -15,18 +15,28 @@
 ## Goal
 - have one place where everything is saved so it is easier to search through it and find interesting stuff
 - create a sql-Database which is automatically updated 
+- combine everything in one web app (Django)
 
 ### Progress
-- [ ] gmail
+- [ ] Gmail
     - [x] connected to the api
     - [x] queried ids of mails
     - [ ] developed a parser to get the content of the mails 
     - [ ] meta data and content from each mail 
-- [ ] pocket
+- [ ] Pocket
     - [x] connected to the api
     - [x] made first request
-    - [ ] query the articles 
-- [ ] medium
+    - [x] query the articles 
+    - [ ] write a script to collect data 
+- [ ] Medium
     - [ ] look for ways the get the data from medium
     - ...
+- [ ] Youtube saved videos
+    - [ ] connect to the api
+    - [ ] get saved videos
+    - [ ] write a script to collect data
+- [ ] Twitter saved tweets
+    - [ ] connect to the api
+    - [ ] get saved tweets
+    - [ ] write a script to collect data
 
