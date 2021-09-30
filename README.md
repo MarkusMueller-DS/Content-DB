@@ -1,5 +1,5 @@
 # Content Database
-- by Markus Müller
+##### by Markus Müller
 
 ## Problem
 - I am following multiple newsletters, actively saving interesting articles to pocket or medium. Now I am at the point where I have no overview over all the articles and blog posts.
