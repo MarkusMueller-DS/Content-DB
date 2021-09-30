@@ -21,6 +21,8 @@
 - [ ] Gmail
     - [x] connected to the api
     - [x] queried ids of mails
+    - [ ] query ids for newsletters
+        - [ ] KDnuggets
     - [ ] developed a parser to get the content of the mails 
     - [ ] meta data and content from each mail 
 - [ ] Pocket
