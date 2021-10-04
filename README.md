@@ -3,14 +3,7 @@
 
 ## Problem
 - I am following multiple newsletters, actively saving interesting articles to pocket or medium. Now I am at the point where I have no overview over all the articles and blog posts.
-- I follow a few terrific newsletters about Data Science, Machine Learning and programming but my mailbox is getting confusing and overcrowded with mails
-- I am Subscribed to the following newsletters:
-    - KDnuggets
-    - DeepLearning AI
-    - PyCoder's Weekly
-    - Data Elixir
-    - DeepAI
-    - ML Mastery
+- Especially my mailbox is overflowing with possibly relevant information
 
 ## Goal
 - have one place where everything is saved so it is easier to search through it and find interesting stuff
@@ -21,9 +14,16 @@
 - [ ] Gmail
     - [x] connected to the api
     - [x] queried ids of mails
-    - [ ] query ids for newsletters
-        - [ ] KDnuggets
     - [ ] developed a parser to get the content of the mails 
+        - [ ] KDnuggets
+            - [x] explore how to get the relevant informations
+            - [ ] create script to get ids
+            - [ ] create script to get data
+        - [ ] DeepLearning AI
+        - [ ] PyCoder's Weekly
+        - [ ] Data Elixir
+        - [ ] DeepAI
+        - [ ] ML Mastery
     - [ ] meta data and content from each mail 
 - [ ] Pocket
     - [x] connected to the api
@@ -38,7 +38,8 @@
     - [ ] get saved videos
     - [ ] write a script to collect data
 - [ ] Twitter saved tweets
-    - [ ] connect to the api
+    - [x] connect to the api -> API dose not allow to access saved tweets
+    - [ ] check possibility to get data through selenium
     - [ ] get saved tweets
     - [ ] write a script to collect data
 
