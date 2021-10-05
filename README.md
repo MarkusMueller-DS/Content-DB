@@ -10,6 +10,10 @@
 - create a sql-Database which is automatically updated 
 - combine everything in one web app (Django)
 
+### Files
+- Notebooks are WIP and are, for now, only for testing purposes
+
+
 ### Progress
 - [ ] Gmail
     - [x] connected to the api
