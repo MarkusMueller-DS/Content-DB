@@ -15,17 +15,22 @@
 
 
 ### Progress
+- [ ] Database
+    - [x] create a test database
+    - [ ] combine results in one database
 - [ ] Gmail
     - [x] connected to the api
     - [x] queried ids of mails
     - [ ] developed a parser to get the content of the mails 
         - [ ] KDnuggets
             - [x] explore how to get the relevant informations
-            - [ ] create script to get ids
-            - [ ] create script to get data
+            - [x] create script to get ids
+            - [x] create script to get data
         - [ ] DeepLearning AI
         - [ ] PyCoder's Weekly
         - [ ] Data Elixir
+            - [x] get data
+            - [ ] parse data
         - [ ] DeepAI
         - [ ] ML Mastery
     - [ ] meta data and content from each mail 
