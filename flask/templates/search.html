@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Datebase</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+    </head>
+    <body>
+        <h1>Search Database</h1>
+        <p><a href="/">back</a> to startpage</p>
+        <p>Search parameters:</p>
+        
+        <p>Source:</p>
+            <form method="POST">
+                <input type="checkbox" id="KDnuggets" name="source" value="KDnuggets">
+                <label for="KDnuggets">KDnuggets</label><br>
+                <input type="checkbox" id="DataElixir" name="source" value="DataElixir">
+                <label for="DataElixir">DataElixir</label><br>
+                <input type="checkbox" id="Pocket" name="source" value="Pocket">
+                <label for="Pocket">Pocket</label>
+                <input type="submit" name="submit_button">
+            </form>
+        <p>selected: {{ data }}</p>
+        
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <td>Title</td>
+                    <td>Summary</td>
+                    <td>Link</td>
+                </tr>
+            </thead>
+        </table>
+        {% if dataFrame %}
+        <p>test</p>
+        {% endif %}
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Datebase</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+    </head>
+    <body>
+        <h1>Table with every element in the database</h1>
+        <p><a href="/">back</a> to startpage</p>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <td>Title</td>
+                    <td>Summary</td>
+                    <td>Link</td>
+                </tr>
+            </thead>
+        {% for index, row in content.iterrows() %}
+            <tbody>
+                <tr>
+                    <td>{{row['title']}}</td>
+                    <td>{{row['summary']}}</td>
+                    <td><a href="{{row['url']}}">{{row['url']}}</a></td>
+                </tr>
+            </tbody>
+        {% endfor %}
+        </table>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Datebase</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+    </head>
+    <body>
+        <h1>Welcome to your content DB</h1>
+        <p>Here are five random selected articels:</p>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <td>Title</td>
+                    <td>Summary</td>
+                    <td>Link</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for index, row in content.iterrows() %}
+                <tr>
+                    <td>{{row['title']}}</td>
+                    <td>{{row['summary']}}</td>
+                    <td><a href="{{row['url']}}">{{row['url']}}</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <p>scroll through entire database <a href="db.html">here</a></p>
+        <p>search through entire database <a href="search.html">here</p>
+    </body>
+</html>
