@@ -17,7 +17,8 @@
 ### Progress
 - [ ] Database
     - [x] create a test database
-    - [ ] combine results in one database
+    - [x] combine results in one database:
+        - currently combined: articles form KDnuggets, Dataelixir and Pocket
 - [ ] Gmail
     - [x] connected to the api
     - [x] queried ids of mails
