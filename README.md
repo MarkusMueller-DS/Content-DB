@@ -15,6 +15,10 @@
 
 
 ### Progress
+- [ ] Flask Web App
+    - [x] create web app
+    - [ ] add search function 
+    - [ ] design web page
 - [ ] Database
     - [x] create a test database
     - [x] combine results in one database:
